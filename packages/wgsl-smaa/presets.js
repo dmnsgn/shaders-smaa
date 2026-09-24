@@ -1,8 +1,22 @@
 /**
+ * @typedef {object} SMAAPreset
+ * @property {Object<string, number>} edges
+ * @property {Object<string, number>} weights
+ */
+
+/**
+ * @typedef {object} SMAAPresets
+ * @property {SMAAPreset} low
+ * @property {SMAAPreset} medium
+ * @property {SMAAPreset} high
+ * @property {SMAAPreset} ultra
+ */
+
+/**
  * The reference's quality presets, as override constants for the edges and
  * weights pass modules. Low and medium disable diagonal and corner detection.
  *
- * @type {Record<"low" | "medium" | "high" | "ultra", { edges: Record<string, number>, weights: Record<string, number> }>}
+ * @type {SMAAPresets}
  */
 const PRESETS = {
   low: {
