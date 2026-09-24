@@ -1,6 +1,6 @@
 {
   "name": "glsl-smaa",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "SMAA (Enhanced Subpixel Morphological Antialiasing) post-processing for WebGL, as ES module strings and GLSL files.",
   "keywords": [
     "glsl",
@@ -50,9 +50,9 @@
     "primitive-geometry": "^3.0.0",
     "tweakpane": "^4.0.5"
   },
+  "packageManager": "npm@10.5.1",
   "engines": {
     "node": ">=22.0.0",
     "snowdev": ">=3.0.0-alpha.3"
-  },
-  "packageManager": "npm@10.5.1"
+  }
 }
