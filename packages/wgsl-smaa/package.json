@@ -1,0 +1,57 @@
+{
+  "name": "wgsl-smaa",
+  "version": "1.0.0",
+  "description": "SMAA (Enhanced Subpixel Morphological Antialiasing) post-processing for WebGPU, as ES module strings and WGSL files.",
+  "keywords": [
+    "wgsl",
+    "webgpu",
+    "aa",
+    "smaa",
+    "antialiasing",
+    "shader",
+    "post-processing"
+  ],
+  "homepage": "https://github.com/dmnsgn/shaders-smaa/tree/main/packages/wgsl-smaa",
+  "bugs": "https://github.com/dmnsgn/shaders-smaa/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmnsgn/shaders-smaa.git",
+    "directory": "packages/wgsl-smaa"
+  },
+  "funding": [
+    {
+      "type": "individual",
+      "url": "https://paypal.me/dmnsgn"
+    },
+    {
+      "type": "individual",
+      "url": "https://commerce.coinbase.com/checkout/56cbdf28-e323-48d8-9c98-7019e72c97f3"
+    }
+  ],
+  "license": "MIT",
+  "author": "Damien Seguin (https://github.com/dmnsgn)",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./index.js"
+    },
+    "./*.wgsl": "./*.wgsl",
+    "./chunks/*.wgsl": "./chunks/*.wgsl"
+  },
+  "main": "./index.js",
+  "types": "./types/index.d.ts",
+  "devDependencies": {
+    "es-module-shims": "^2.8.4",
+    "pex-gpu": "^0.0.3",
+    "pex-math": "^4.4.0",
+    "primitive-geometry": "^3.0.0",
+    "tweakpane": "^4.0.5"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "snowdev": ">=3.0.0-alpha.3"
+  },
+  "packageManager": "npm@10.5.1"
+}

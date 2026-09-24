@@ -1,4 +1,5 @@
 node_modules
 .DS_Store
-types
-lib
+/packages/*/types/
+/packages/*/lib/
+/packages/*/web_modules/

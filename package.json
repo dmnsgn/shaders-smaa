@@ -1,53 +1,27 @@
 {
-  "name": "glsl-smaa",
-  "version": "3.0.0",
-  "description": "SMAA (Enhanced Subpixel Morphological Antialiasing) post-processing; WebGL (OpenGL ES 2.0) implementation with no fluff.",
-  "keywords": [
-    "glsl",
-    "aa",
-    "smaa",
-    "antialiasing",
-    "glslify",
-    "webgl",
-    "shader"
-  ],
-  "homepage": "https://github.com/dmnsgn/glsl-smaa",
-  "bugs": "https://github.com/dmnsgn/glsl-smaa/issues",
+  "name": "shaders-smaa",
+  "private": true,
+  "description": "Monorepo for the GLSL and WGSL SMAA (Enhanced Subpixel Morphological Antialiasing) shaders.",
+  "homepage": "https://github.com/dmnsgn/shaders-smaa",
+  "bugs": "https://github.com/dmnsgn/shaders-smaa/issues",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dmnsgn/glsl-smaa.git"
+    "url": "git+https://github.com/dmnsgn/shaders-smaa.git"
   },
-  "funding": [
-    {
-      "type": "individual",
-      "url": "https://paypal.me/dmnsgn"
-    },
-    {
-      "type": "individual",
-      "url": "https://commerce.coinbase.com/checkout/56cbdf28-e323-48d8-9c98-7019e72c97f3"
-    }
-  ],
   "license": "MIT",
   "author": "Damien Seguin (https://github.com/dmnsgn)",
   "type": "module",
-  "main": "index.js",
-  "types": "types/index.d.ts",
-  "devDependencies": {
-    "async-preloader": "^8.0.4",
-    "bunny": "^1.0.1",
-    "cameras": "^3.1.1",
-    "core-js": "^3.45.1",
-    "dat.gui": "^0.7.9",
-    "es-module-shims": "^2.6.2",
-    "geom-normals": "^2.1.0",
-    "gl-matrix": "^3.4.4",
-    "parse-hdr": "^1.0.0",
-    "primitive-geometry": "^2.11.0",
-    "regl": "^2.1.1"
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build:shaders": "node scripts/build.js",
+    "release:glsl": "npm exec -w glsl-smaa -- npx snowdev release",
+    "release:wgsl": "npm exec -w wgsl-smaa -- npx snowdev release",
+    "test": "node --test \"test/*.test.js\""
   },
   "engines": {
-    "node": ">=22.0.0",
-    "npm": ">=10.5.1",
-    "snowdev": ">=2.5.x"
-  }
+    "node": ">=22.0.0"
+  },
+  "packageManager": "npm@10.5.1"
 }
